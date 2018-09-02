@@ -1,0 +1,23 @@
+<mat-card>
+	<mat-card-title>Template-driven form</mat-card-title>
+	<mat-card-content>
+		<form #form="ngForm">
+			<mat-form-field class="example-full-width">
+				<input matInput placeholder="Name" [(ngModel)]="hero.name" name="name" #nameInput="ngModel" required>
+				<mat-error *ngIf="nameInput.invalid && nameInput.hasError('required')">
+					Name is required
+				</mat-error>
+			</mat-form-field>
+			<mat-form-field class="example-full-width">
+				<input matInput placeholder="Age" [(ngModel)]="hero.age" name="age" type="number">
+			</mat-form-field>
+			<mat-form-field class="example-full-width">
+				<mat-select placeholder="Superpower" [(ngModel)]="hero.superpower" name="superpower">
+					<mat-option *ngFor="let power of powers" [value]="power">
+						{{ power }}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</form>
+	</mat-card-content>
+</mat-card>

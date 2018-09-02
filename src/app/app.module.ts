@@ -1,7 +1,13 @@
+import { MaterialModule } from './shared/material.module';
+import { StateDemoModule } from './state-demo/state-demo.module';
+import { FormsDemoModule } from './forms-demo/forms-demo.module';
+import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+
+
+
 
 import { AppComponent } from './app.component';
 
@@ -12,7 +18,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsDemoModule,
+    StateDemoModule,
+    // MaterialModule,
+    // FormlyModule.forRoot(),
+    // FormlyMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

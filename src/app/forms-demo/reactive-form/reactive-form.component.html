@@ -1,0 +1,27 @@
+<mat-card>
+	<mat-card-title>Reactive form</mat-card-title>
+	<mat-card-content>
+		<form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+			<mat-form-field>
+				<input matInput placeholder="Name" formControlName="name">
+				<mat-error *ngIf="form.get('name').invalid && form.get('name').hasError('required')">
+					Name is required
+				</mat-error>
+				<mat-error *ngIf="form.get('name').invalid && form.get('name').hasError('minlength')">
+					Name should contain 3 symbols
+				</mat-error>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Age" formControlName="age">
+				<mat-error *ngIf="form.get('age').invalid && form.get('age').hasError('min')">
+					Age should not be less than 18
+				</mat-error>
+			</mat-form-field>
+			<mat-form-field>
+				<mat-select placeholder="Superpower" formControlName="superpower">
+					<mat-option *ngFor="let power of powers" [value]="power">{{ power }}</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</form>
+	</mat-card-content>
+</mat-card>
