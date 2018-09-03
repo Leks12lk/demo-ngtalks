@@ -1,0 +1,10 @@
+<mat-card>
+	<mat-card-title>@ngx-formly/material</mat-card-title>
+	<mat-card-content>
+		<form role="form" novalidate [formGroup]="form" (ngSubmit)="submit()">
+			<formly-form [model]="model" [fields]="fields" [form]="form">
+				<button type="submit" color="primary" mat-raised-button>Submit</button>
+			</formly-form>
+		</form>
+	</mat-card-content>
+</mat-card>

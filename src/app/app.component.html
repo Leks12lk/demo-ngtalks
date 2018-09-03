@@ -1,3 +1,13 @@
+<h1>NgTalks Demo</h1>
+<nav mat-tab-nav-bar>
+	<a mat-tab-link [routerLink]="'/forms'" routerLinkActive #forms="routerLinkActive" [active]="forms.isActive">
+												Forms
+										</a>
+	<a mat-tab-link [routerLink]="'/state'" routerLinkActive #state="routerLinkActive" [active]="state.isActive">
+												State
+										</a>
+</nav>
+
 
 
 <router-outlet></router-outlet>

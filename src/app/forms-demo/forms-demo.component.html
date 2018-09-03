@@ -1,5 +1,14 @@
- <template-driven-form></template-driven-form>
-<hr>
-<reactive-form></reactive-form>
-<hr> 
-<dynamic-form></dynamic-form>
+<mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+	<mat-tab label="Template-driven">
+		<template-driven-form></template-driven-form>
+	</mat-tab>
+	<mat-tab label="Reactive">
+		<reactive-form></reactive-form>
+	</mat-tab>
+	<mat-tab label="Dynamic">
+		<dynamic-form></dynamic-form>
+	</mat-tab>
+	<mat-tab label="Formly">
+		<formly-form-demo></formly-form-demo>
+	</mat-tab>
+</mat-tab-group>
