@@ -1,0 +1,41 @@
+<todo-form>
+</todo-form>
+<mat-card>
+	<mat-card-title>Todos List</mat-card-title>
+
+	<mat-card-content>
+		<mat-table [dataSource]="dataSource" *ngIf="todos?.length > 0; else emptyList">
+
+			<!-- Name Column -->
+			<ng-container matColumnDef="decription">
+				<mat-header-cell *matHeaderCellDef> Decription </mat-header-cell>
+				<mat-cell *matCellDef="let todo"> {{ todo.description }} </mat-cell>
+			</ng-container>
+
+			<!-- Weight Column -->
+			<ng-container matColumnDef="responsible">
+				<mat-header-cell *matHeaderCellDef> Responsible </mat-header-cell>
+				<mat-cell *matCellDef="let todo"> {{ todo.responsible }} </mat-cell>
+			</ng-container>
+
+			<!-- Symbol Column -->
+			<ng-container matColumnDef="priority">
+				<mat-header-cell *matHeaderCellDef> Priority </mat-header-cell>
+				<mat-cell *matCellDef="let todo"> {{ todo.priority }} </mat-cell>
+			</ng-container>
+
+			<ng-container matColumnDef="action">
+				<mat-header-cell *matHeaderCellDef></mat-header-cell>
+				<mat-cell *matCellDef="let todo">
+					<button mat-raised-button color="warn" type="button" (click)="removeTodo(todo)">Delete</button>
+				</mat-cell>
+			</ng-container>
+
+			 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+			<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> 
+		</mat-table>
+		<ng-template #emptyList>
+			<p>You have no any todos</p>
+		</ng-template>
+	</mat-card-content>
+</mat-card>
