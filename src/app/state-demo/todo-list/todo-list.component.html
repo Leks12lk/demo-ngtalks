@@ -1,8 +1,8 @@
-<todo-form>
-</todo-form>
+<todo-form></todo-form>
+
 <mat-card>
 	<mat-card-title>Todos List</mat-card-title>
-
+	
 	<mat-card-content>
 		<mat-table [dataSource]="dataSource" *ngIf="todos?.length > 0; else emptyList">
 
@@ -21,7 +21,12 @@
 			<!-- Symbol Column -->
 			<ng-container matColumnDef="priority">
 				<mat-header-cell *matHeaderCellDef> Priority </mat-header-cell>
-				<mat-cell *matCellDef="let todo"> {{ todo.priority }} </mat-cell>
+				<mat-cell *matCellDef="let todo"> 
+					 <span class="badge" [ngClass]="{'danger': todo.priority === 'high', 'warning': todo.priority === 'medium', 'success': todo.priority === 'low'}">
+							{{ todo.priority }} 
+					</span> 
+					
+				</mat-cell>
 			</ng-container>
 
 			<ng-container matColumnDef="action">

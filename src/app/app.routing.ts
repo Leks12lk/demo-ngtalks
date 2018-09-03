@@ -13,7 +13,7 @@ const routes: Routes = [
 	{
 		path: 'state', component: StateDemoComponent,
 		children: stateDemoRoutes
-	},	
+	},
 	{
 		path: '**',
 		redirectTo: '/forms',

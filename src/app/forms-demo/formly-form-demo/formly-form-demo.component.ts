@@ -41,7 +41,9 @@ export class FormlyFormDemoComponent implements OnInit {
 	cities$ = of(this.cities);
 	
 	form = new FormGroup({});
+	
 	resultObject: IPerson = null;
+	
 	model: IPerson = {
 		id: 123,
 		firstname: 'Oleksii',

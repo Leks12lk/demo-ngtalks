@@ -1,2 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.badge {
+		display: inline-block;
+		padding: .25em .4em;
+		font-size: 75%;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		border-radius: .25rem;
+		color: #fff;
+
+		&.success {
+				background: #28a745;
+		}
+		&.warning {
+				background: #ffc107;
+		}
+		&.danger {
+				background: #dc3545;
+		}
+}
+
+.badge-info {
+		color: #fff;
+		background-color: #17a2b8;
+}

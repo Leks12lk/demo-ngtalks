@@ -1,23 +1,10 @@
-<mat-card>
+<mat-card id="add-todo-container">
 	<mat-card-title>Create Todo</mat-card-title>
 	<mat-card-content>
-		<form (ngSubmit)="addTodo(); todoForm.reset()" #todoForm="ngForm">
-			<mat-form-field class="example-full-width">
-				<input matInput type="text" class="form-control" [(ngModel)]="model.description" id="description" name="description" placeholder="Description"
-				 #description="ngModel">
-			</mat-form-field>
-			<mat-form-field class="example-full-width">
-				<input matInput type="text" class="form-control" [(ngModel)]="model.responsible" id="responsible" name="responsible" placeholder="Responsible"
-				 #responsible="ngModel">
-			</mat-form-field>
-			<mat-form-field class="example-full-width">
-				<mat-select class="form-control" [(ngModel)]="model.priority" id="priority" name="priority" #priority="ngModel">
-					<mat-option value="low">Low</mat-option>
-					<mat-option value="medium">Medium</mat-option>
-					<mat-option value="high">High</mat-option>
-				</mat-select>
-			</mat-form-field>
-			<button mat-raised-button color="primary" type="submit">Create</button>
+		<form role="form" [formGroup]="form" (ngSubmit)="submit(addTodoForm)" id="add-todo-form" #addTodoForm>
+			<formly-form [model]="model" [fields]="fields" [form]="form">
+				<button type="submit" color="primary" [disabled]="!form.valid" mat-raised-button>Submit</button>
+			</formly-form>
 		</form>
 	</mat-card-content>
 </mat-card>

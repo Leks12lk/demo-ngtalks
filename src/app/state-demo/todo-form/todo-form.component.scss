@@ -1,0 +1,14 @@
+#add-todo-container {
+		margin-bottom: 20px;
+}
+
+#add-todo-form {
+		& /deep/ .mat-form-field-wrapper {
+				display: inline-block !important;
+		}
+		& /deep/ .mat-form-field {
+				display: inline;
+		}
+}
+
+
