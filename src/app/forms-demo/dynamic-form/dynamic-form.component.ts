@@ -33,6 +33,5 @@ export class DynamicFormComponent implements OnInit {
 	 this.personProps = Object.keys(this.person); 
 	 
 	}
- 
 
 }

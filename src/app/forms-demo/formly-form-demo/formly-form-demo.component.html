@@ -3,8 +3,12 @@
 	<mat-card-content>
 		<form role="form" novalidate [formGroup]="form" (ngSubmit)="submit()">
 			<formly-form [model]="model" [fields]="fields" [form]="form">
-				<button type="submit" color="primary" mat-raised-button>Submit</button>
+				<button type="submit" color="primary" [disabled]="!form.valid" mat-raised-button>Submit</button>
 			</formly-form>
 		</form>
 	</mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="resultObject" class="result-card">
+	{{ resultObject | json }}
 </mat-card>

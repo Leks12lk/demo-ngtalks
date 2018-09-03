@@ -1,3 +1,4 @@
+import { IHero } from '../models/hero';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenFormComponent implements OnInit {
 	powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
-	hero = {
+	hero: IHero = {
 		name: 'Dr IQ 3000',
 		age: 40,
 		superpower: this.powers[0]

@@ -1,3 +1,4 @@
+import { IHero } from '../models/hero';
 import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,7 @@ export class ReactiveFormComponent implements OnInit {
 	form: FormGroup;
 
 	powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
-	hero = {
+	hero: IHero = {
 		name: 'Dr IQ 3000',
 		age: 40,
 		superpower: this.powers[0]

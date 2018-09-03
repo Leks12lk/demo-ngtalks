@@ -18,28 +18,24 @@ import { FormlyFormDemoComponent } from './formly-form-demo/formly-form-demo.com
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    SharedModule,
-    //MaterialModule,
-   
-    FormlyModule.forRoot({
-      validationMessages: [
-        { name: 'required', message: 'This field is required' },
-      ],
-    }),
-
-     FormlyMaterialModule
-   
-  ],
-  declarations: [
-    FormsDemoComponent,
-    TemplateDrivenFormComponent,
-    ReactiveFormComponent,
-    DynamicFormComponent,
-    FormlyFormDemoComponent
+	imports: [
+		CommonModule,
+		FormsModule,
+		ReactiveFormsModule,
+		SharedModule,
+		FormlyModule.forRoot({
+			validationMessages: [
+				{ name: 'required', message: 'This field is required' },
+			],
+		}),
+		FormlyMaterialModule 
+	],
+	declarations: [
+		FormsDemoComponent,
+		TemplateDrivenFormComponent,
+		ReactiveFormComponent,
+		DynamicFormComponent,
+		FormlyFormDemoComponent
 ]
 })
 export class FormsDemoModule { }
