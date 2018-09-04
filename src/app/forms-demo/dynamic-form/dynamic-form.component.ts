@@ -34,4 +34,8 @@ export class DynamicFormComponent implements OnInit {
 	 
 	}
 
+	onSubmit() {
+		this.person = this.form.value;
+	}
+
 }

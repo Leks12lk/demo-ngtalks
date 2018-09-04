@@ -42,8 +42,6 @@ export class FormlyFormDemoComponent implements OnInit {
 	
 	form = new FormGroup({});
 	
-	resultObject: IPerson = null;
-	
 	model: IPerson = {
 		id: 123,
 		firstname: 'Oleksii',
@@ -115,7 +113,7 @@ export class FormlyFormDemoComponent implements OnInit {
 	];
 
 	submit() {
-		this.resultObject = this.model;
+		// here handle submit event
 	}
 
 }

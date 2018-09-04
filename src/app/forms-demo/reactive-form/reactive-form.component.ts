@@ -21,12 +21,16 @@ export class ReactiveFormComponent implements OnInit {
 		this.form = fb.group({
 			name: ['', [Validators.required, Validators.minLength(3)]],
 			age: ['', [Validators.max(120), Validators.min(18)]],
-			superpower: ''
+			superpower: ''			
 		});
 	}
 
 	ngOnInit() {
 		this.form.patchValue(this.hero);
+	}
+
+	onSubmit() {
+		this.hero = this.form.value;
 	}
 
 

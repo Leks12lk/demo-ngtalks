@@ -1,8 +1,6 @@
-<todo-form></todo-form>
-
 <mat-card>
 	<mat-card-title>Todos List</mat-card-title>
-	
+
 	<mat-card-content>
 		<mat-table [dataSource]="dataSource" *ngIf="todos?.length > 0; else emptyList">
 
