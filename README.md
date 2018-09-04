@@ -1,7 +1,7 @@
 ## DemoNgtalks
 
 <p>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.</p>
-<p>This project use angular-material as UI dev kit</p>
+<p>This project uses angular-material as UI dev kit</p>
 
 ## Project description
 
